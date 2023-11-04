@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700;800&display=swap');
+body {
+  background: var(--bg);
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Source Code Pro', monospace;
+}
+
+:root {
+  --blue: #00c2ff;
+  --green: #00ff57;
+  --red: #ff0040;
+  --bg-1: #212327;
+  --bg-2: #31343a;
+  --bg: rgb(36, 40, 44);
+}
+
+.current-set {
+  margin: auto;
+  max-width: 700px;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  h1 {
+    color: var(--blue);
+    text-align: center;
+    font-size: 3.3rem;
+    margin-bottom: 35px;
+    font-weight: 500;
+  }
+
+  .learn-btn {
+    color: var(--green);
+    background: var(--bg-1);
+    padding: 20px 60px;
+    font-size: 1.5rem;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.1s ease-in-out;
+  }
+
+  .learn-btn:hover {
+    background: var(--bg-2);
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    height: 673px;
+  }
+
+  .fade {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 217, 255, 0.08) 100%
+    );
+    pointer-events: none;
+    height: 90px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background: var(--bg-1);
+    aspect-ratio: 8/1;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+    border-radius: 6px;
+
+    .term-col {
+      position: relative;
+      display: flex;
+      align-items: center;
+      border-right: 3px solid var(--bg-2);
+
+      .term {
+        margin: 0 auto;
+        text-align: center;
+        line-height: 4.5rem;
+        cursor: text;
+      }
+    }
+
+    .definition-col {
+      padding-left: 30px;
+
+      .definition {
+        cursor: text;
+        width: fit-content;
+      }
+    }
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #556064;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(24, 26, 26, 0.397);
+}
