@@ -144,7 +144,7 @@ export const getSetById = async (req, res) => {
   }
 };
 
-export const getAllSets = async () => {
+export const getAllSets = async (req, res) => {
   try {
     res.status(200).json(await prisma.study_sets.findMany());
   } catch (e) {

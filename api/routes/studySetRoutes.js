@@ -5,7 +5,7 @@ import {
   deleteSet,
   getAllSets,
   getSetById,
-} from '../controllers/studySetController';
+} from '../controllers/studySetController.js';
 
 const router = Router();
 
@@ -14,3 +14,5 @@ router.get('/:id', getSetById);
 router.post('/', createSet);
 router.post('/:id', addCardsToSet);
 router.delete('/:id', deleteSet);
+
+export default router;
