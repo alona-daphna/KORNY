@@ -1,0 +1,26 @@
+{
+  "name": "Korny Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Save words to study sets",
+  "permissions": [],
+  "author": "Alona Daphna",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "",
+      "24": "",
+      "32": ""
+    },
+    "default_tile": "Korny Extension",
+    "default_popup": "index.html"
+  }
+}
